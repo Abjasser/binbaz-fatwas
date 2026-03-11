@@ -133,22 +133,19 @@ export function FatwaDisplay({ initialFatwa, initialIndex, total }: FatwaDisplay
           onCopyError={() => showToast('تعذّر نسخ الفتوى، يرجى المحاولة مجدداً', 'error')}
         />
 
-        <p
-          className="text-center text-gray-400 text-sm mt-5 select-none"
-          aria-hidden="true"
-        >
-          اضغط{' '}
-          <kbd className="bg-gray-100 border border-gray-300 rounded-md
-                          px-2 py-0.5 text-gray-600 font-mono text-xs shadow-sm">
-            Enter
-          </kbd>
-          {' '}للانتقال إلى الفتوى التالية
-        </p>
       </div>
 
       {/* ── Footer ── */}
-      <footer className="bg-dark-green-dark text-gold/40 py-3 px-6 text-center text-xs select-none">
-        فتاوى الشيخ ابن باز رحمه الله
+      <footer className="bg-dark-green-dark py-4 px-6 text-center text-xs">
+        <p className="text-gold/40 mb-1 select-none">فتاوى الشيخ ابن باز رحمه الله</p>
+        <a
+          href="https://www.linkedin.com/in/abdullah-aljasser-4b76ba210"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gold/60 hover:text-gold transition-colors duration-200"
+        >
+          عبدالله الجاسر
+        </a>
       </footer>
 
       {/* ── Toast ── */}
