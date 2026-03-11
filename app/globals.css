@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-cream text-gray-900 antialiased;
+    font-feature-settings: 'kern' 1;
+  }
+
+  /* Better Arabic text rendering */
+  [dir='rtl'] {
+    text-align: right;
+  }
+}
+
+/* ── Utilities ───────────────────────────────────────────── */
+@layer utilities {
+  /* Subtle warm gradient used on the page background */
+  .bg-islamic-pattern {
+    background-color: theme('colors.cream');
+    background-image:
+      radial-gradient(ellipse 80% 60% at 10% 0%, rgba(201, 168, 76, 0.10) 0%, transparent 70%),
+      radial-gradient(ellipse 70% 50% at 90% 100%, rgba(26, 71, 42, 0.07) 0%, transparent 70%);
+  }
+
+  /* Smooth content transitions for fatwa swapping */
+  .fatwa-enter {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  }
+
+  .fatwa-exit {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  }
+}
+
+/* ── Scroll bar styling (WebKit) ─────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: theme('colors.cream');
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: theme('colors.gold.light');
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: theme('colors.gold.DEFAULT');
+}
+
+/* ── Focus ring (accessibility) ──────────────────────────── */
+:focus-visible {
+  outline: 2px solid theme('colors.gold.DEFAULT');
+  outline-offset: 2px;
+}
