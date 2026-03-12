@@ -5,6 +5,9 @@ interface FatwaCardProps {
   index: number;
 }
 
+/** Collapses 3+ consecutive newlines to two (one blank line) to avoid huge gaps from raw data */
+const clean = (text: string) => text.replace(/\n{3,}/g, '\n\n').trim();
+
 /**
  * Magazine / editorial layout — full-bleed sections, no card wrapper.
  * Sections stack vertically with alternating backgrounds.
@@ -47,7 +50,7 @@ export function FatwaCard({ title, question, answer, index }: FatwaCardProps) {
 
           <p className="text-gray-700 leading-loose text-base md:text-lg
                         text-justify whitespace-pre-line">
-            {question}
+            {clean(question)}
           </p>
         </div>
       </section>
@@ -64,7 +67,7 @@ export function FatwaCard({ title, question, answer, index }: FatwaCardProps) {
 
           <p className="text-gray-800 leading-loose text-base md:text-lg
                         text-justify whitespace-pre-line">
-            {answer}
+            {clean(answer)}
           </p>
         </div>
       </section>

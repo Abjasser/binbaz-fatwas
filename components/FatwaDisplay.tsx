@@ -112,7 +112,7 @@ export function FatwaDisplay({ initialFatwa, initialIndex, total }: FatwaDisplay
 
       {/* ── Animated content area ── */}
       <main
-        className={`flex-1 transition-opacity duration-300 ease-in-out
+        className={`transition-opacity duration-300 ease-in-out
                     ${isVisible ? 'opacity-100' : 'opacity-0'}`}
       >
         <FatwaCard
