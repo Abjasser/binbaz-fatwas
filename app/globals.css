@@ -11,7 +11,7 @@
 
   body {
     @apply bg-cream text-gray-900 antialiased;
-    font-feature-settings: 'kern' 1;
+    font-feature-settings: 'rlig' 1, 'liga' 1, 'kern' 1;
   }
 
   /* Better Arabic text rendering */
