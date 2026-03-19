@@ -117,6 +117,7 @@ export function FatwaDisplay({ initialFatwa, initialIndex, total }: FatwaDisplay
       >
         <FatwaCard
           title={fatwa.title}
+          category={fatwa.category}
           question={fatwa.question}
           answer={fatwa.answer}
           index={index}

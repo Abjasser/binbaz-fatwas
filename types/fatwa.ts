@@ -4,6 +4,8 @@ export interface Fatwa {
   id: number;
   /** Arabic title of the fatwa */
   title: string;
+  /** Topical category of the fatwa */
+  category: string;
   /** The question posed to the Sheikh */
   question: string;
   /** The Sheikh's answer/ruling */

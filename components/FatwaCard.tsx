@@ -1,5 +1,6 @@
 interface FatwaCardProps {
   title: string;
+  category: string;
   question: string;
   answer: string;
   index: number;
@@ -12,7 +13,7 @@ const clean = (text: string) => text.replace(/\n{3,}/g, '\n\n').trim();
  * Magazine / editorial layout — full-bleed sections, no card wrapper.
  * Sections stack vertically with alternating backgrounds.
  */
-export function FatwaCard({ title, question, answer, index }: FatwaCardProps) {
+export function FatwaCard({ title, category, question, answer, index }: FatwaCardProps) {
   return (
     <article dir="rtl">
       {/* ── Hero: large title on dark green ── */}
@@ -28,6 +29,16 @@ export function FatwaCard({ title, question, answer, index }: FatwaCardProps) {
                          leading-relaxed max-w-2xl mx-auto">
             {title}
           </h1>
+
+          {/* Category badge */}
+          {category && (
+            <div className="mt-6">
+              <span className="inline-block bg-gold/20 text-gold border border-gold/30
+                               text-sm font-medium px-4 py-1.5 rounded-full">
+                {category}
+              </span>
+            </div>
+          )}
 
           {/* Decorative rule */}
           <div className="flex items-center justify-center gap-3 mt-8">
