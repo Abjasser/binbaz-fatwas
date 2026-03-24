@@ -103,7 +103,7 @@ export function FatwaDisplay({ initialFatwa, initialIndex, total }: FatwaDisplay
       <div className="bg-dark-green-dark py-3 px-6">
         <div className="max-w-4xl mx-auto flex items-center justify-center gap-4">
           <div className="h-px flex-1 bg-gold/20" />
-          <p className="text-gold/75 text-xs md:text-sm font-medium tracking-widest whitespace-nowrap select-none">
+          <p className="text-gold/75 text-xs md:text-sm font-medium whitespace-nowrap select-none">
             فتاوى الشيخ عبدالعزيز بن باز رحمه الله
           </p>
           <div className="h-px flex-1 bg-gold/20" />
